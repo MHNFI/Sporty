@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTIFY | Run Beyond Your Limits</title>
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">SPORTIFY.</a>
+            
+            <nav class="nav-menu">
+                <a href="#hero">Beranda</a>
+                <a href="#katalog">Katalog</a>
+                <a href="#about">Tentang</a>
+            </nav>
+
+            <!-- Bagian navigasi ikon yang sudah dibersihkan (TIDAK DUPLIKAT) -->
+            <div class="nav-icons">
+                <!-- Ikon Filter dihapus dari sini -->
+                <button aria-label="Dark Mode Toggle" class="icon-btn" id="theme-toggle" title="Ubah Tema"><i class="fas fa-moon"></i></button>
+                <button aria-label="Cart" class="icon-btn" title="Keranjang"><i class="fas fa-shopping-cart"></i></button>
+                
+                <!-- Ikon Akun ditambahkan di posisi paling kanan (pada mode desktop) -->
+                <button aria-label="Akun" class="icon-btn" title="Akun Pengguna"><i class="fas fa-user"></i></button>
+                
+                <!-- Hamburger menu (Hanya muncul di Mobile/HP) -->
+                <button aria-label="Menu" class="icon-btn hamburger" id="menu-toggle" title="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay Latar Belakang Gelap ketika Filter Aktif -->
+    <div class="filter-backdrop" id="filter-backdrop"></div>
+
+    <!-- Sidebar Filter Drawer ( off-canvas kanan dari atas ke bawah ) -->
+    <aside class="filter-sidebar" id="filter-sidebar">
+        <div class="filter-header">
+            <h3>Filter Produk</h3>
+            <button class="close-filter" id="close-filter" aria-label="Tutup Filter"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="filter-body">
+            <div class="filter-group">
+                <h4>Merek</h4>
+                <label><input type="checkbox"> Mills</label>
+                <label><input type="checkbox"> 910 Nineten</label>
+                <label><input type="checkbox"> Nike</label>
+                <label><input type="checkbox"> Adidas</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Kategori</h4>
+                <label><input type="checkbox"> Daily Trainer</label>
+                <label><input type="checkbox"> Marathon / Race</label>
+                <label><input type="checkbox"> Trail Running</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Ukuran</h4>
+                <div class="size-grid">
+                    <button class="size-btn">39</button>
+                    <button class="size-btn active">40</button>
+                    <button class="size-btn">41</button>
+                    <button class="size-btn">42</button>
+                    <button class="size-btn">43</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-image">
+                <!-- Banner Utama -->
+                <img src="assets/banner-utama.jpg" alt="Sepatu Lari Premium">
+            </div>
+        </section>
+
+        <!-- Katalog Area -->
+        <section id="katalog" class="section-padding bg-light">
+            <div class="container catalog-layout">
+                
+                <div class="product-area">
+                    <div class="product-header">
+                        <h2>Koleksi Terbaru</h2>
+                        <!-- Tombol Filter di halaman juga bisa membuka drawer yang sama -->
+                        <button class="btn btn-outline" id="inline-filter-btn"><i class="fas fa-filter"></i> Filter</button>
+                    </div>
+
+                    <!-- Grid Produk Desktop: 4 Kolom -->
+                    <div class="product-grid">
+                        
+                        <!-- Produk 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/sepatu-1.jpg" alt="Haze Vision 1.0">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3>Haze Vision 1.0</h3>
+                                <p class="category">Daily Trainer</p>
+                                <div class="price">Rp 549.000</div>
+                                <button class="btn btn-primary w-100">Beli</button>
+                            </div>
+                        </div>
+
+                        <!-- Produk 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="assets/sepatu-2.jpg" alt="Enerpro Zenith">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3>Enerpro Zenith</h3>
+                                <p class="category">Marathon / Long Run</p>
+                                <div class="price">Rp 699.000</div>
+                                <button class="btn btn-primary w-100">Beli</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Bagian Atas Footer (Kolom Link & Lokasi) -->
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Sumber Daya</h4>
+                    <ul>
+                        <li><a href="#">Cari Toko</a></li>
+                        <li><a href="#">Jadi Member</a></li>
+                        <li><a href="#">Pencari Sepatu Lari</a></li>
+                        <li><a href="#">SPORTIFY Coaching</a></li>
+                        <li><a href="#">Majalah</a></li>
+                        <li><a href="#">Diskon Pelajar</a></li>
+                        <li><a href="#">Kirim Masukan</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">Dapatkan Bantuan</a></li>
+                        <li><a href="#">Status Pesanan</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Pengembalian</a></li>
+                        <li><a href="#">Opsi Pembayaran</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang SPORTIFY</a></li>
+                        <li><a href="#">Berita</a></li>
+                        <li><a href="#">Karier</a></li>
+                        <li><a href="#">Investor</a></li>
+                        <li><a href="#">Keberlanjutan</a></li>
+                        <li><a href="#">Dampak Sosial</a></li>
+                        <li><a href="#">Laporkan Masalah</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Pilihan Lokasi di ujung kanan -->
+                <div class="footer-col footer-region">
+                    <a href="#" class="region-link"><i class="fas fa-globe"></i> Indonesia</a>
+                </div>
+            </div>
+
+            <!-- Bagian Bawah Footer (Copyright & Link Legal) -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 SPORTIFY, Inc. Hak cipta dilindungi undang-undang.</p>
+                </div>
+                <ul class="legal-links">
+                    <li><a href="#">Panduan <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a></li>
+                    <li><a href="#">Syarat Penjualan</a></li>
+                    <li><a href="#">Syarat Penggunaan</a></li>
+                    <li><a href="#">Kebijakan Privasi SPORTIFY</a></li>
+                    <li><a href="#">Pengaturan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
