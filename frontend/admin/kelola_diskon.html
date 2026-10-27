@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Diskon | SPORTIFY Admin</title>
+    <link rel="stylesheet" href="../assetss/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">SPORTIFY. Admin</div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="kelola_produk.html"><i class="fas fa-box"></i> Kelola Katalog</a></li>
+            <li><a href="kelola_diskon.html" class="active"><i class="fas fa-tags"></i> Kelola Diskon</a></li>
+            <li><a href="#" id="btn-logout"><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <h2>Kelola Diskon & Promo</h2>
+        </header>
+
+        <section class="crud-area">
+            <div class="action-bar">
+                <button class="btn btn-tambah" id="btn-tambah-diskon" style="background-color: #e11d48;"><i class="fas fa-percentage"></i> Pasang Diskon</button>
+            </div>
+            <div class="table-container">
+                <table class="table-produk">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Produk</th>
+                            <th>Harga Asli</th>
+                            <th>Diskon (%)</th>
+                            <th>Harga Akhir</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-diskon">
+                        <tr><td colspan="6" style="text-align: center;">Memuat data diskon...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Form Diskon -->
+    <div class="modal-overlay" id="modal-diskon">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title-diskon">Pasang Diskon Produk</h3>
+                <button class="close-modal" id="btn-tutup-diskon"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="form-diskon">
+                <input type="hidden" id="diskon-id">
+                <div class="form-group">
+                    <label>Pilih Produk</label>
+                    <select id="select-produk-diskon" required><option value="">-- Loading --</option></select>
+                </div>
+                <div class="form-group"><label>Diskon (%)</label><input type="number" id="persen-diskon" min="1" max="99" required></div>
+                <button type="submit" class="btn btn-simpan">Simpan Diskon</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assetss/js/admin.js"></script>
+</body>
+</html>
