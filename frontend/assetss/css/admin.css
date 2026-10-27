@@ -1,0 +1,40 @@
+/* --- RESET & DASAR --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { display: flex; background-color: #f4f6f9; color: #333; height: 100vh; overflow: hidden; }
+
+/* --- SIDEBAR --- */
+.sidebar { width: 250px; background-color: #2b3a55; color: white; display: flex; flex-direction: column; }
+.sidebar-logo { font-size: 1.5rem; font-weight: bold; padding: 20px; border-bottom: 1px solid #3d5278; text-align: center; }
+.sidebar-menu { list-style: none; padding: 20px 0; }
+.sidebar-menu li a { display: block; color: #cbd5e1; padding: 15px 20px; text-decoration: none; transition: 0.3s; }
+.sidebar-menu li a i { margin-right: 10px; width: 20px; }
+.sidebar-menu li a:hover, .sidebar-menu li a.active { background-color: #1e293b; color: white; border-left: 4px solid #ff5722; }
+
+/* --- MAIN CONTENT --- */
+.main-content { flex: 1; display: flex; flex-direction: column; overflow-y: auto; }
+.topbar { background-color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.crud-area { padding: 30px; }
+.action-bar { margin-bottom: 20px; }
+
+/* --- TOMBOL --- */
+.btn { padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; color: white; font-weight: bold; }
+.btn-tambah { background-color: #0d9488; }
+.btn-edit { background-color: #f59e0b; padding: 6px 10px; font-size: 0.85rem; margin-right: 5px; }
+.btn-hapus { background-color: #ef4444; padding: 6px 10px; font-size: 0.85rem; }
+.btn-simpan { background-color: #ff5722; width: 100%; padding: 12px; margin-top: 10px; }
+
+/* --- TABEL --- */
+.table-container { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+.table-produk { width: 100%; border-collapse: collapse; }
+.table-produk th, .table-produk td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+.table-produk th { background-color: #f8fafc; font-weight: 600; color: #64748b; }
+
+/* --- MODAL (POP-UP FORM) --- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: 0.3s; z-index: 1000; }
+.modal-overlay.active { opacity: 1; pointer-events: all; }
+.modal-content { background: white; padding: 25px; border-radius: 8px; width: 400px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.close-modal { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-size: 0.9rem; font-weight: 600; }
+.form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; }

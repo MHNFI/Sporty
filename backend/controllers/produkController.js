@@ -1,7 +1,7 @@
-// Mengimpor koneksi database (nanti kita buat di folder config)
+// Mengimpor koneksi database
 const db = require('../config/db');
 
-// 1. READ: Mengambil semua data produk (katalog)
+// READ
 const getSemuaProduk = (req, res) => {
     const sql = "SELECT * FROM tb_sepatu";
     
@@ -14,7 +14,7 @@ const getSemuaProduk = (req, res) => {
     });
 };
 
-// 2. CREATE: Menambahkan produk baru (sepatu/jersey)
+// CREATE
 const tambahProduk = (req, res) => {
     // req.body berisi data yang dikirim dari form HTML Admin
     const { nama, harga, gambar, stok } = req.body;
@@ -33,7 +33,7 @@ const tambahProduk = (req, res) => {
     });
 };
 
-// 3. UPDATE: Mengubah data produk berdasarkan ID
+// UPDATE
 const editProduk = (req, res) => {
     const id = req.params.id; // Menangkap ID dari URL (misal: /api/produk/1)
     const { nama, harga, gambar, stok } = req.body;
@@ -48,7 +48,7 @@ const editProduk = (req, res) => {
     });
 };
 
-// 4. DELETE: Menghapus produk berdasarkan ID
+// DELETE
 const hapusProduk = (req, res) => {
     const id = req.params.id;
     

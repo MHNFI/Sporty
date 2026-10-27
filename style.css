@@ -378,3 +378,4 @@ img { max-width: 100%; height: auto; display: block; }
     /* 4 Kolom di desktop agar terlihat modern & padat */
     .product-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 }
+
